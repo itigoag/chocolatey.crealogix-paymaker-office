@@ -24,7 +24,7 @@ $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     fileType       = 'MSI'
     file           = "$($unzipLocation)\PayMaker$($version).msi"
-    silentArgs     = $silentArgs
+    silentArgs     = '/q'
     ValidExitCodes = @(0, 1000, 1101)
 }
 
