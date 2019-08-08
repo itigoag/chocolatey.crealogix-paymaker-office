@@ -38,7 +38,7 @@ deploy:
   - provider: github
     name: 'itigo-bot'
     email: 'chocomilk@itigo.ch'
-    url: github.com/itigoag/chocolatey.airtame.git
+    url: github.com/itigoag/chocolatey.crealogix-paymaker-office.git
     key: "{{ lookup('env','GITHUB_API_KEY') }}"
 
 # Notification
