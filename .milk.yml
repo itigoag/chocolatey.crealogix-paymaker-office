@@ -1,0 +1,49 @@
+---
+# chocomilk vars
+
+# Package Changelog
+changelog: 'https://shop.crealogix.com/software-updates/pm-office5.html'
+
+# Regex for Version
+version: "{{ register_changelog.content |
+  regex_search('.*Aktuelle Version.*') |
+  regex_search('\\d.\\d.\\d.\\d\\b')
+  }}"
+
+# Download URL
+url: 'https://shop.crealogix.com/download/get/file/pm5.office'
+# url64:
+
+searchreplace:
+  'tools/chocolateyinstall.ps1':
+    - regwxp: (^\s*[$]*urlPackage\s*=\s*)('.*')
+      replace: '$urlPackage = "{{ url }}"'
+    - regwxp: (^\s*[$]*urlPackage64\s*=\s*)('.*')
+      replace: '$urlPackage64 = "{{ url64 | default()}}"'
+    - regwxp: (^\s*[$]*checksumPackage\s*=\s*)('.*')
+      replace: '$checksumPackage = "{{ file_hash }}"'
+    - regwxp: (^\s*[$]*checksumPackage64\s*=\s*)('.*')
+      replace: '$checksumPackage64 = "{{ file64_hash  | default() }}"'
+
+# readme to decripton
+readme:
+  start: 5
+  end: 13
+
+# deploy
+deploy:
+  - provider: chocolatey
+    repository: 'https://nuget.itigo.tech/upload'
+    key: "{{ lookup('env','CHOCOLATEY_ITIGO_API_KEY') }}"
+  - provider: github
+    name: 'itigo-bot'
+    email: 'chocomilk@itigo.ch'
+    url: github.com/itigoag/chocolatey.airtame.git
+    key: "{{ lookup('env','GITHUB_API_KEY') }}"
+
+# Notification
+notifications:
+  - provider: mattermost
+    url: 'https://matters.itigo.tech'
+    key: "{{ lookup('env','MATTTERMOST_API_KEY') }}"
+    channel: 'software-packages'

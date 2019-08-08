@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>crealogix-paymaker-office</id>
+    <version>5.0.9.0</version>
+    <title>Crealogix PayMaker Office</title>
+    <authors>CREALOGIX</authors>
+    <owners>ITIGO AG, sbaerlocher</owners>
+    <licenseUrl>https://shop.crealogix.com/</licenseUrl>
+    <projectUrl>https://shop.crealogix.com/finanzsoftware/paymaker.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/itigoag/chocolatey.crealogix-paymaker-office@master/icon/crealogix-paymaker-office.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description><![CDATA[
+The multi-banking software PayMaker Office offers you comprehensive features for your payment transactions, with an overview and transparency at all times and across different banks. You can make payments of all types and in a wide variety of formats quickly and reliably.
+
+## Package Parameters
+
+- `/CleanStartmenu` Removes frequently used Crealogix PayMaker Office shortcuts from the Startmenu.
+- `/RemoveDesktopIcons` Removes the desktop icon from Crealogix PayMaker Office.
+]]></description>
+    <summary>Crealogix PayMaker Office</summary>
+    <releaseNotes>https://shop.crealogix.com/releasenote/view/history/sku/pm5.office/</releaseNotes>
+    <packageSourceUrl>https://github.com/itigoag/chocolatey.adobe-acrobat-reader-dc</packageSourceUrl>
+    <tags>crealogix paymaker finance</tags>
+    <dependencies>
+      <dependency id="dotnet3.5" version="3.5.0.0" />
+      <dependency id="vcredist2008" />
+      <dependency id="vcredist2013" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools/**" target="tools" />
+  </files>
+</package>
