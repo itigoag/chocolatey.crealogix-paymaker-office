@@ -25,7 +25,7 @@ searchreplace:
     - regwxp: (^\s*[$]*checksumPackage64\s*=\s*)('.*')
       replace: '$checksumPackage64 = "{{ file64_hash  | default() }}"'
 
-# readme to decripton
+# readme to description
 readme:
   start: 5
   end: 13
@@ -45,5 +45,5 @@ deploy:
 notifications:
   - provider: mattermost
     url: 'https://matters.itigo.tech'
-    key: "{{ lookup('env','MATTTERMOST_API_KEY') }}"
+    key: "{{ lookup('env','MATTERMOST_API_KEY') }}"
     channel: 'software-packages'
