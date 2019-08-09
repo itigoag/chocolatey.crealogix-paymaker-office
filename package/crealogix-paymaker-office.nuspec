@@ -1,8 +1,8 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>crealogix-paymaker-office</id>
-    <version>5.0.9.0</version>
+    <version>5.1.4.0</version>
     <title>Crealogix PayMaker Office</title>
     <authors>CREALOGIX</authors>
     <owners>ITIGO AG, sbaerlocher</owners>
@@ -23,12 +23,12 @@ The multi-banking software PayMaker Office offers you comprehensive features for
     <packageSourceUrl>https://github.com/itigoag/chocolatey.adobe-acrobat-reader-dc</packageSourceUrl>
     <tags>crealogix paymaker finance</tags>
     <dependencies>
-      <dependency id="dotnet3.5" version="3.5.0.0" />
-      <dependency id="vcredist2008" />
-      <dependency id="vcredist2013" />
+      <dependency id="dotnet3.5" version="3.5.0.0"/>
+      <dependency id="vcredist2008"/>
+      <dependency id="vcredist2013"/>
     </dependencies>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools/**" target="tools"/>
   </files>
 </package>
