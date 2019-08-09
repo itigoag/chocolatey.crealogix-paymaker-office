@@ -16,14 +16,8 @@ url: 'https://shop.crealogix.com/download/get/file/pm5.office'
 
 searchreplace:
   'tools/chocolateyinstall.ps1':
-    - regwxp: (^\s*[$]*urlPackage\s*=\s*)('.*')
-      replace: '$urlPackage = "{{ url }}"'
-    - regwxp: (^\s*[$]*urlPackage64\s*=\s*)('.*')
-      replace: '$urlPackage64 = "{{ url64 | default()}}"'
-    - regwxp: (^\s*[$]*checksumPackage\s*=\s*)('.*')
-      replace: '$checksumPackage = "{{ file_hash }}"'
-    - regwxp: (^\s*[$]*checksumPackage64\s*=\s*)('.*')
-      replace: '$checksumPackage64 = "{{ file64_hash  | default() }}"'
+    - regwxp: (^\s*[$]*checksumZip\s*=\s*)('.*')
+      replace: '$checksumZip = "{{ file_hash }}"'
 
 # readme to description
 readme:
