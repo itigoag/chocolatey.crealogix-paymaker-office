@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>crealogix-paymaker-office</id>
-    <version>5.0.9.0</version>
+    <version>5.1.4.0</version>
     <title>Crealogix PayMaker Office</title>
     <authors>CREALOGIX</authors>
     <owners>ITIGO AG, sbaerlocher</owners>
